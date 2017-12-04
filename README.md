@@ -89,3 +89,9 @@ C编程
     sudo gcc index.c
     ./a.out
     ```
+    
+    输出
+    
+    Hello,My Baby.
+    
+    
