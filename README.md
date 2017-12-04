@@ -87,7 +87,7 @@ C编程
   
     ```
     sudo gcc index.c
-    ./a.out         <--------- a.out 是 Assembler Output 缩写，意思是 汇编输出。
+    ./a.out         <--------- a.out 是 Assembler Output 缩写，意思是汇编输出。
     ```
     
     输出
@@ -97,7 +97,7 @@ C编程
   - 看一下经过**汇编**，再被汇编器翻译成机器语言的文件：
     
     ```
-    sudo vim a.out
+    sudo vim a.out            // 也可以自行安装 hexedit 来查看
     :%!xxd -g 1
     ```
     
