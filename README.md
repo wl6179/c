@@ -72,7 +72,7 @@ C编程
     
   - 编辑 index.c
   
-  ```
+  `````
   #include <stdio.h>
   
   /* main: the output */
@@ -81,4 +81,4 @@ C编程
           printf("Hello,My Baby.\n");
           return 0;
   }
-  ```
+  `````
