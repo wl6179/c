@@ -72,13 +72,13 @@ C编程
     
   - 编辑 index.c
   
-  `````
-  #include <stdio.h>
-  
-  /* main: the output */
-  int main(void)
-  {
-          printf("Hello,My Baby.\n");
-          return 0;
-  }
-  `````
+    `````
+    #include <stdio.h>
+
+    /* main: the output */
+    int main(void)
+    {
+            printf("Hello,My Baby.\n");
+            return 0;
+    }
+    `````
