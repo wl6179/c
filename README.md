@@ -82,3 +82,9 @@ C编程
             return 0;
     }
     `````
+    
+  - 编译
+  
+    `
+    sudo gcc index.c
+    `
