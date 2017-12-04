@@ -89,7 +89,7 @@ C编程
   - 编译
   
     ```
-    sudo gcc index.c
+    sudo gcc -Wall index.c
     ./a.out         <--------- a.out 是 Assembler Output 缩写，意思是汇编输出。
     ```
     
