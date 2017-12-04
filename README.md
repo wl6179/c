@@ -85,6 +85,7 @@ C编程
     
   - 编译
   
-    `
+    ```
     sudo gcc index.c
-    `
+    ./a.out
+    ```
