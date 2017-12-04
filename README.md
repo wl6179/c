@@ -70,3 +70,15 @@ C编程
     sudo aptitude install build-essential
     ```
     
+  - 编辑 index.c
+  
+  `
+  #include <stdio.h>
+  
+  /* main: the output */
+  int main(void)
+  {
+          printf("Hello,My Baby.\n");
+          return 0;
+  }
+  `
