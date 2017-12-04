@@ -65,8 +65,8 @@ C编程
 运行程序：
 
   - 安装*GNU C*环境
+  
+  ```
+  sudo aptitude install build-essential
+  ```
     
-    `安装`
-    ```
-    sudo aptitude install build-essential
-    ```
