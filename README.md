@@ -148,13 +148,13 @@ Ubuntu + Github Markdown
 
   - 也有不同的类型：（使用*声明*来控制）
     
-    -字符型 `char`
+    - 字符型 `char`
     
-    -整型 `int`
+    - 整型 `int`
     
-    -单精度浮点型 `float`
+    - 单精度浮点型 `float`
     
-    -双精度浮点型 `double` 等
+    - 双精度浮点型 `double` 等
     
   - **声明**在C语言中的定义有3种：
     
