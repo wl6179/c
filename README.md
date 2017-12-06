@@ -21,7 +21,7 @@ Ubuntu + Github Markdown
 
 [第二章 函数](md/function/readme.md)
 
-[第三章 tmp](md/tmp/readme.md)
+[第三章 Base底层语法](md/tmp/readme.md)
 
 [TOC]
 
