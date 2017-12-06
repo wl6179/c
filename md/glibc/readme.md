@@ -55,3 +55,8 @@ glibc
   - 等等。。。
 
 其中，*libc.so* 是Linux平台gcc命令指定所默认包含的，所以 gcc *`-lc`* 参数是默认的。即使用gcc编译时，默认就带上了此`glibc`C函数库中的 *libc.so*库文件。
+
+注意
+  
+  C函数库 glibc，并非linux中唯一的C函数库。例如嵌入式系统，就使用的C函数库是：uClibc。
+
