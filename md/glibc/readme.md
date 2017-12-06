@@ -46,7 +46,7 @@ glibc
   
   - *libc.so*
     
-    `linux下，默认gcc就带着此库文件（c）
+    `linux下，默认gcc就带着此库文件（c）`
   
   - libm.so
     
