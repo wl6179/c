@@ -16,9 +16,9 @@ Ubuntu + Github Markdown
 
 [TOC]
 
-[第一章 函数](md/01function/01.md)
+[第一章 函数](md/01-function/01.md)
 
-[第二章 tmp](md/02tmp/01.md)
+[第二章 tmp](md/02-tmp/01.md)
 
 
 
