@@ -184,5 +184,6 @@ Ubuntu + Github Markdown
 
   例子
   
-    'a' + 1 yu 'z' de value is eque.
-  
+    'a' + 25 与 'z' 的值，是相等的。
+    '0' + 9 与 '9' 的值，也相等。
+    但注意： '0' 和整数值 0 是不相等的。  
