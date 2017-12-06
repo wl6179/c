@@ -42,12 +42,12 @@ C标准
 glibc
 ----------
 
-glibc 是Linux平台上最广泛使用的C函数库。而且它囊括了**C标准库的实现**
+`glibc` 是Linux平台上最广泛使用的C函数库。而且它囊括了**`C标准库`的实现**
   
-  - libc.so
+  - *libc.so*
   
   - libm.so
   
   - 等等。。。
 
-它也是Linux平台gcc命令所默认包含的`-lm`参数的缘由，即使用gcc编译时，默认就带上了此glibc库（中的 libc.so）。
+其中，*libc.so* 是Linux平台gcc命令指定所默认包含的，所以 gcc *`-lm`* 参数是默认的。即使用gcc编译时，默认就带上了此`glibc`库中的 *libc.so*。
