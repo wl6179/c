@@ -14,12 +14,12 @@ Ubuntu + Github Markdown
 
 ## 目录 ##
 
-[TOC]
 
 [第一章 函数](md/01-function/01.md)
 
 [第二章 tmp](md/02-tmp/01.md)
 
+[TOC]
 
 
 开场 Cookie
