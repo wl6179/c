@@ -24,7 +24,7 @@
     
     `sudo gcc -Wall maths.c -lm`        //**链接**上外部库math.h（通常位于 /usr/include/）
     
-    GCC 的默认选项本身就有 -lc，此处所以使用 -lm，是因为 math 头文件存在于库文件 libm 里（简写为lm，即-lm）。
+    GCC 的默认选项本身就有 -lc，此处所以使用 `-lm`，是因为 math 头文件存在于库文件 `libm` 里（简写为lm，即`-lm`）。
       
       注意观察：
         
