@@ -15,9 +15,9 @@ Ubuntu + Github Markdown
 ## 目录 ##
 
 
-[第一章 函数](md/01-function/01.md)
+[第一章 函数](md/01-function/readme.md)
 
-[第二章 tmp](md/02-tmp/01.md)
+[第二章 tmp](md/02-tmp/readme.md)
 
 [TOC]
 
