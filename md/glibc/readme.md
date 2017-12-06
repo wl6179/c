@@ -45,8 +45,12 @@ glibc
 `glibc` 是Linux平台上最广泛使用的`C函数库`。而且它囊括了（绝大部分）**C标准库**的实现
   
   - *libc.so*
+    
+    `linux下，默认gcc就带着此库文件（c）
   
   - libm.so
+    
+    `linux下，需要 gcc -lm 才能音粗此库文件（m，即 libm.so）`
   
   - 等等。。。
 
