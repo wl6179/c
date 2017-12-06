@@ -15,9 +15,11 @@ Ubuntu + Github Markdown
 ## 目录 ##
 
 
-[第一章 函数](md/01-function/readme.md)
+[第一章 C标准库和glibc](md/glibc/readme.md)
 
-[第二章 tmp](md/02-tmp/readme.md)
+[第二章 函数](md/function/readme.md)
+
+[第三章 tmp](md/tmp/readme.md)
 
 [TOC]
 
