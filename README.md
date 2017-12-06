@@ -220,4 +220,4 @@ Ubuntu + Github Markdown
 
 赞赏二维码：
 
-![赞赏作者：克里斯王](ig/wx.png)
+![赞赏作者：克里斯王](ig/wx001.png)
