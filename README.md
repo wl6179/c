@@ -199,5 +199,5 @@ Ubuntu + Github Markdown
     
     注意:
     '0' 的ascii码是 48, 而不是 0;
-    '\0'的ascii码是 0
+    '\0'的ascii码是 0                    <----------- 注意是转义字符, 在发挥作用!
 
