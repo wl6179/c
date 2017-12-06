@@ -47,10 +47,14 @@ glibc
   - *libc.so*
     
     `linux下，默认gcc就带着此库文件（c）`
+      
+      多数标准的库文件，一般都位于 /usr/include/ 目录下，当中也包括了当前的库文件 libc.so。
   
   - libm.so
     
     `linux下，需要 gcc -lm 才能音粗此库文件（m，即 libm.so）`
+      
+      顺便说一句，libm.so 位于linux的 /lib/ 目录下。
   
   - 等等。。。
 
