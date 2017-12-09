@@ -15,7 +15,7 @@
     #include <stdio.h>
     #include <math.h>       //引入C标准库的 math
 
-    int main()
+    int main(void)
     {
             double pi = 3.1416;
             
