@@ -92,9 +92,9 @@ Ubuntu + Github Markdown
 
   - 安装*GNU C*环境
     
-    `````Shell
+    ```bash
     sudo aptitude install build-essential
-    `````
+    ```
     
   - 编辑 index.c
   
