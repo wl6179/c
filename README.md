@@ -92,13 +92,13 @@ Ubuntu + Github Markdown
 
   - 安装*GNU C*环境
     
-    ```
+    `````Shell
     sudo aptitude install build-essential
-    ```
+    `````
     
   - 编辑 index.c
   
-    `````
+    `````c
     #include <stdio.h>
 
     /* main: the output */
