@@ -13,7 +13,7 @@
     
     ```c
     #include <stdio.h>
-    #include <math.h>       //引入C标准库的 math
+    #include <math.h>       #引入C标准库的 math
 
     int main(void)
     {
