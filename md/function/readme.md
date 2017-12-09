@@ -11,7 +11,7 @@
   
   - 例子
     
-    ```
+    ```c
     #include <stdio.h>
     #include <math.h>       //引入C标准库的 math
 
@@ -32,7 +32,7 @@
         
         printf 来自 libc 库文件，因为 GCC 默认就是用了 -lc 参数，所以默认就包含了词库文件！此库文件支持的是 stdio 头文件的 printf！！
     
-    ```
+    ```bash
     Sin(pi/2) = 1.000000
     Ln(1) = 0.000000
     ```
