@@ -111,7 +111,7 @@ Ubuntu + Github Markdown
     
   - 编译
   
-    ```
+    ```bash
     sudo gcc -Wall index.c
     ./a.out         <--------- a.out 是 Assembler Output 缩写，意思是汇编输出。
     ```
@@ -122,12 +122,12 @@ Ubuntu + Github Markdown
     
   - 看一下经过**汇编**，再被汇编器翻译成**机器语言**的文件：
     
-    ```
+    ```vim
     sudo vim a.out            // 也可以自行安装 hexedit 来查看
     :%!xxd -g 1
     ```
     
-    ```
+    ```vim
     00000220: f0 01 00 00 00 00 00 00 f0 01 00 00 00 00 00 00  ................
     00000230: 01 00 00 00 00 00 00 00 2f 6c 69 62 36 34 2f 6c  ......../lib64/l
     00000240: 64 2d 6c 69 6e 75 78 2d 78 38 36 2d 36 34 2e 73  d-linux-x86-64.s
