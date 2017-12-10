@@ -99,8 +99,8 @@
     #include <stdio.h>
     
     /* 无函数体的纯声明，此处已经有了顺序，所以下边函数体的定义就无需再遵循编译器的顺序了。其实就是顺序在此处已定！ */
-    void grandson(void);
-    void son(void);
+    void grandson(void);      // 完整的声明，就是 函数原型
+    void son();           // 不完整的声明（缺少指明参数类型及个数），则不是 函数原型
     
     /* 老子 */
     int main(void)
