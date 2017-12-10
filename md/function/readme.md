@@ -73,16 +73,19 @@
     `````c
     #include <stdio.h>
     
+    /* 孙子 */
     void grandson(void)
     {
       ...
     }
     
+    /* 儿子 */
     void son(void)
     {
       grandson();
     }
     
+    /* 老子 */
     int main(void)
     {
       son();
