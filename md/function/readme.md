@@ -62,3 +62,30 @@
     echo $?
     26
     ```
+
+函数的声明和定义顺序
+----------
+
+以先声明后调用的原则，被调用的函数，必须先被声明。
+
+  - 声明顺序必须这样
+    
+    `````c
+    #include <stdio.h>
+    
+    void child(void)
+    {
+      ...
+    }
+    
+    void sum(void)
+    {
+      child();
+    }
+    
+    int main(void)
+    {
+      sum();
+      return 0;
+    }
+    `````
