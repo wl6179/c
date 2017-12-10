@@ -73,19 +73,19 @@
     `````c
     #include <stdio.h>
     
-    void child(void)
+    void grandson(void)
     {
       ...
     }
     
-    void sum(void)
+    void son(void)
     {
-      child();
+      grandson();
     }
     
     int main(void)
     {
-      sum();
+      son();
       return 0;
     }
     `````
