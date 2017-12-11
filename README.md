@@ -21,7 +21,7 @@ Ubuntu + Github Markdown
 
 [第2章 函数](md/function/readme.md)
 
-[第3章 Base基本语法](#)
+[第3章 Base基本语法](md/basicsyntax/readme.md)
 
 [第4章 结构](#)
 
