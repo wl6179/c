@@ -27,7 +27,7 @@ Ubuntu + Github Markdown
 
 [第5章 调试工具](#)
 
-[第6章 遇到算法](#)
+[第6章 遇到算法](md/algorithm/readme.md)
 
 [第7章 深入计算机原理](#)
 
