@@ -8,6 +8,8 @@
 
 至少先让天狮集团的PHP团队的小伙子们，能看上这么一本快速上升的资料吧。如果反响好给赞赏，就证明此书的出版有意义，便会最终永久免费开放给大家。书中只顾及实战和原理讲解，小伙伴都是辛劳的码夫，唯一需求就是立刻上手，深入浅出。
 
+这是一本了解编程底层的高级入门书，看完这本书，别再告诉我你学不会C语言了。没错，这本书专治顽疾，各种学不会C语言的顽疾。为此，我已请出八大天神为你加油！
+
 
 # 写书平台 #
 
@@ -22,7 +24,7 @@ Ubuntu + Github Markdown
 
   [第2章 函数](md/function/readme.md)
 
-  [第3章 Base基本语法](md/basicsyntax/readme.md) 暂略
+  [第3章 Base基本语法 略](md/basicsyntax/readme.md)
 
   [第4章 遇到算法](md/algorithm/readme.md)
 
@@ -73,7 +75,7 @@ Ubuntu + Github Markdown
 
     `测试条件，根据不同测试结果，执行不同后续指令`
 
-  - 循环
+  - 循环（与[递归](md/algorithm/readme.md)等同）
 
     `重复执行操作`
 
