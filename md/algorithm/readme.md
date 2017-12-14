@@ -28,15 +28,15 @@
 
       1.先把*基础条件*写上，定好框架
 
-        `````c
-        int factorial(int n)
+      `````c
+      int factorial(int n)
+      {
+        // Base Case.
+        if (n == 0)
         {
-          // Base Case.
-          if (n == 0)
-          {
-            return 1;
-          }
+          return 1;
         }
-        `````
+      }
+      `````
 
-      2.
+      2.so on...
