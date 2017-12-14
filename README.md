@@ -16,35 +16,35 @@ Ubuntu + Github Markdown
 
 ## 目录（天龙八部） ##
 
-第一部 天
+- 第一部 天
 
-    [第1章 C标准库和glibc](md/glibc/readme.md)
+  [第1章 C标准库和glibc](md/glibc/readme.md)
 
-    [第2章 函数](md/function/readme.md)
+  [第2章 函数](md/function/readme.md)
 
-    [第3章 Base基本语法](md/basicsyntax/readme.md)（暂略）
+  [第3章 Base基本语法](md/basicsyntax/readme.md)（暂略）
 
-    [第4章 遇到算法](md/algorithm/readme.md)
+  [第4章 遇到算法](md/algorithm/readme.md)
 
-第二部 龙
+- 第二部 龙
 
-    [第5章 结构](#)
+  [第5章 结构](#)
 
-    [第6章 调试工具](#)
+  [第6章 调试工具](#)
 
-第三部 夜叉
+- 第三部 夜叉
 
-    [第7章 深入计算机原理](#)
+  [第7章 深入计算机原理](#)
 
-第四部 乾达婆
+- 第四部 乾达婆
 
-第五部 阿修罗
+- 第五部 阿修罗
 
-第六部 迦楼罗
+- 第六部 迦楼罗
 
-第七部 紧那罗
+- 第七部 紧那罗
 
-第八部 摩呼罗迦
+- 第八部 摩呼罗迦
 
 [TOC]
 
