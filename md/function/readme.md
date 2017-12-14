@@ -20,6 +20,7 @@
             double pi = 3.1416;
 
             printf("Sin(pi/2) = %f\nLn(1) = %f\n", sin(pi/2), log(1.0));
+
             return 0;
     }
     ```
@@ -52,7 +53,9 @@
     {
       int year = 2050;
       printf("the year %d", year);
+
       return 26;
+    }
     `````
 
     ```bash
