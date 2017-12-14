@@ -16,20 +16,23 @@ Ubuntu + Github Markdown
 
 ## 目录 ##
 
+第一部
 
-[第1章 C标准库和glibc](md/glibc/readme.md)
+  [第1章 C标准库和glibc](md/glibc/readme.md)
 
-[第2章 函数](md/function/readme.md)
+  [第2章 函数](md/function/readme.md)
 
-[第3章 Base基本语法](md/basicsyntax/readme.md)
+  [第3章 Base基本语法](md/basicsyntax/readme.md)
 
-[第4章 结构](#)
+  [第4章 遇到算法](md/algorithm/readme.md)
 
-[第5章 调试工具](#)
+第二部
 
-[第6章 遇到算法](md/algorithm/readme.md)
+  [第5章 结构](#)
 
-[第7章 深入计算机原理](#)
+  [第6章 调试工具](#)
+
+  [第7章 深入计算机原理](#)
 
 [TOC]
 
