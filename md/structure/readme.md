@@ -51,6 +51,25 @@
 
     ```c
     enum some_type { TYPE1 = 1, TYPE2 };
+
+    struct My复数结构 {
+      enum some_type t;       // 给新结构体加一个 识别符，即 数据类型标志enum。（有了它，以后在结构体里编码，就能使用’标志’的变量 TYPE1、TYPE2、TYPE3...等等了！）
+      double x, y;
+    };
+    ```
+
+    ```c
+    struct My复数结构 transformSomething(double x, double y)
+    {
+      struct My复数结构 z;    // 定义新结构体变量
+
+      // 赋值
+      z.t = TYPE1;    // 注意：直接使用以上 标识符 中定义的‘变量’ TYPE1、TYPE2、TYPE3...等等 来赋值！
+      z.x = x;
+      z.y = y;
+
+      return z;
+    }
     ```
 
 ***
