@@ -32,11 +32,13 @@ Ubuntu + Atom + Github + Markdown
 
   [第5章 结构](md/structure/readme.md)
 
-  [第6章 调试工具](#)
+  [第6章 数组](md/array/readme.md)
+
+  [第7章 调试工具](#)
 
 - 第三部 夜叉，无相
 
-  [第7章 深入计算机原理](#)
+  [第8章 深入计算机原理](#)
 
 - 第四部 乾达婆，百变
 
