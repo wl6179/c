@@ -34,11 +34,13 @@ Ubuntu + Atom + Github + Markdown
 
   [第6章 数组](md/array/readme.md)
 
-  [第7章 调试工具](#)
+  [第7章 字符串](md/string/readme.md)
+
+  [第8章 调试工具](#)
 
 - 第三部 夜叉，无相
 
-  [第8章 深入计算机原理](#)
+  [第9章 深入计算机原理](#)
 
 - 第四部 乾达婆，百变
 
