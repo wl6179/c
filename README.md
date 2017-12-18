@@ -36,7 +36,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第7章 字符串](md/string/readme.md)
 
-  [第8章 调试工具](#)
+  [第8章 调试工具](md/testing/readme.md)
 
 - 第三部 夜叉，无相
 
