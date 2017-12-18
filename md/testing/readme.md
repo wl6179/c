@@ -54,7 +54,7 @@ gdb
   # 执行到 main 中的调用 some_function 函数的地方时，停住
   next
 
-  # 用 step命令（简写s），进入 some_function() 函数
+  # 用 step命令（简写s），进入 some_function() 函数（执行下一行语句，如有函数调用则进入函数中第一行 ，想想递归）
   step
 
   # 继续一行一行走 some_function 的每一行
@@ -84,6 +84,27 @@ gdb
   (gdb) print var_some_function=123
   (gdb) print printf("var_some_function=%d\n", var_some_function)
 
+  # 跟踪显示。每次停下来的时候都显示 var_some_function 的值
+  display  var_some_function
+
+  # 设置一个断点：
+  (gdb) list    # 看到源代码行数号
+  (gdb) break 12  # 为源码12行设置一个断点！（也可以是为函数名设断点！！）
+  (gdb) continue    # 继续运行（到下一个断点！）【next 和 continue 与断点是最佳使用组合！】
+  info breakpoints   # （此时用 info 可查已设断点的详细状态！包括命中几次～ ）
+  # 删除一个断点：
+  (gdb) delete breakpoints 2    # 每个断点有一编号，可用编号指定删除某个断点
+  (gdb) info breakpoints    # 再看，已删
+  # 暂时停用一个断点：
+  (gdb) disable breakpoints 3    # 日后可重启
+  (gdb) info breakpoints    # 查看
+  (gdb) enable 3                 # 启用！
+  (gdb) info breakpoints    # 查看
+
+  # 高级
+  # 有条件的中断
+  (gdb) break 3 if var_some_function != 0
+  (gdb) run     # 以上的设置为基础，从头开始走一遍（自动停在该中断处，先是被中断时的详细信息）
 
   # ok
   # 注意，以上随时可以使用一下命令查看更多内容：
@@ -100,4 +121,6 @@ gdb
   #
   # set var 改变变量，就像 firebug 直接改 HTML 一样。如上
   # print 也可以改变变量值。如上
+  #
+  # display var_some_function 跟踪显示。每次停下来的时候都显示当前 var_some_function 的值
   ```
