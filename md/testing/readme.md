@@ -106,6 +106,10 @@ gdb
   (gdb) break 3 if var_some_function != 0
   (gdb) run     # 以上的设置为基础，从头开始走一遍（自动停在该中断处，先是被中断时的详细信息）
 
+  (gdb) x/7b thescanf      # 打印存储单元 thescanf，/7b 是打印 7 组以b（byte字节）为单位一组的内容。
+  (gdb) watch thescanf[5]   # 直到 thescanf[5] 时才会进行监控输出！
+  (gdb) info watchpoints
+
   # ok
   # 注意，以上随时可以使用一下命令查看更多内容：
   #
@@ -123,4 +127,8 @@ gdb
   # print 也可以改变变量值。如上
   #
   # display var_some_function 跟踪显示。每次停下来的时候都显示当前 var_some_function 的值
+  #
+  # x 命令，可以看到 存储单元 的内容。
+  # watch var_some_function 为变量的存储单元，设置一个断点！
+  # info watchpoints  查看为存储单元设置的“断点”。
   ```
