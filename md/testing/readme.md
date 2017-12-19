@@ -107,7 +107,7 @@ gdb
   (gdb) run     # 以上的设置为基础，从头开始走一遍（自动停在该中断处，先是被中断时的详细信息）
 
   (gdb) x/7b thescanf      # 打印存储单元 thescanf，/7b 是打印 7 组以b（byte字节）为单位一组的内容。
-  (gdb) watch thescanf[5]   # 直到 thescanf[5] 时才会进行监控输出！
+  (gdb) watch thescanf[5]   # 直到 thescanf[5] 时才会进行监控输出！（当它有变化时停止）
   (gdb) info watchpoints
 
   # ok
