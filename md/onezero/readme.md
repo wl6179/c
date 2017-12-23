@@ -38,4 +38,4 @@
 
   ![一位全加器 1-bit Full Adder](/ig/logic/1-bitFullAdder.gif)
 
-  一位全加器 1-bit Full Adder
+  一位全加器 1-bit Full Adder（我看了半小时这图，精通了）
