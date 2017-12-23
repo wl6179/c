@@ -24,7 +24,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第2章 函数](md/function/readme.md)
 
-  [第3章 Base基本语法 略](md/basicsyntax/readme.md)
+  [第3章 Base基本语法](md/basicsyntax/readme.md)
 
   [第4章 遇到算法](md/algorithm/readme.md)
 
@@ -40,17 +40,39 @@ Ubuntu + Atom + Github + Markdown
 
 - 第三部 夜叉，无相
 
-  [第9章 深入计算机原理](#)
+  [第9章 二进制 逻辑门表示](md/onezero/readme.md)
+
+  [第10章 二进制 数据类型表示](#)
+
+  [第11章 二进制 运算符表示](#)
+
+  [第12章 深入计算机原理](#)
 
 - 第四部 乾达婆，百变
 
+  [第13章 汇编](md/assembler/readme.md)
+
+  [第14章 链接](#)
+
+  [第15章 预处理](#)
+
+  [第16章 编译](#)
+
 - 第五部 阿修罗，星移
+
+  [第17章 指针](md/pointer/readme.md)
 
 - 第六部 迦楼罗，易筋
 
+  [第18章 标准库](md/stl/readme.md)
+
 - 第七部 紧那罗，般若
 
+  [第19章 Linux内核](md/linuxkernel/readme.md)
+
 - 第八部 摩呼罗迦，逍遥
+
+  [第20章 PHP扩展](md/phpextend/readme.md)
 
 [TOC]
 
