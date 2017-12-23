@@ -37,4 +37,5 @@
   ```
 
   ![一位全加器 1-bit Full Adder](/ig/logic/1-bitFullAdder.gif)
+  
   一位全加器 1-bit Full Adder
