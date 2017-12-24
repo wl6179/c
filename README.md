@@ -40,9 +40,9 @@ Ubuntu + Atom + Github + Markdown
 
 - 第三部 夜叉，无相
 
-  [第9章 二进制 深究逻辑门电路表示](md/onezero/readme.md)
+  [第9章 二进制 逻辑门电路表示](md/onezero/readme.md)
 
-  [第10章 二进制 数据类型表示](#)
+  [第10章 二进制 数据类型表示](md/type/readme.md)
 
   [第11章 二进制 运算符表示](#)
 
