@@ -44,7 +44,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第10章 数字类型表示](md/type/readme.md)
 
-  [第11章 运算符](#)
+  [第11章 运算符](md/operator/readme.md)
 
   [第12章 深入计算机原理](#)
 
