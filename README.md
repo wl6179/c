@@ -46,7 +46,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第11章 运算符](md/operator/readme.md)
 
-  [第12章 深入计算机原理](#)
+  [第12章 深入计算机原理](md/architecture/readme.md)
 
 - 第四部 乾达婆，百变
 
