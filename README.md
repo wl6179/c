@@ -36,17 +36,17 @@ Ubuntu + Atom + Github + Markdown
 
   [第7章 字符串](md/string/readme.md)
 
-  [第8章 调试工具](md/testing/readme.md)
+  [第8章 数字类型](md/type/readme.md)
+
+  [第9章 调试工具](md/testing/readme.md)
 
 - 第三部 夜叉，无相
 
-  [第9章 二进制 逻辑门电路表示](md/onezero/readme.md)
+  [第10章 二进制 逻辑门电路表示](md/onezero/readme.md)
 
-  [第10章 数字类型表示](md/type/readme.md)
+  [第11章 运算符 之 二进制处理数学方法](md/operator/readme.md)
 
-  [第11章 运算符](md/operator/readme.md)
-
-  [第12章 深入计算机原理](md/architecture/readme.md)
+  [第12章 深入计算机原理 二进制的眼光](md/architecture/readme.md)
 
 - 第四部 乾达婆，百变
 
