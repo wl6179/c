@@ -50,8 +50,6 @@ Ubuntu + Atom + Github + Markdown
 
 - 第四部 乾达婆，百变
 
-  [第13章 汇编](md/assembler/readme.md)
-
   [第14章 链接](md/link/readme.md)
 
   [第15章 预处理](#)
