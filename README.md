@@ -46,13 +46,13 @@ Ubuntu + Atom + Github + Markdown
 
   [第11章 运算符 之 二进制处理数学方法](md/operator/readme.md)
 
-  [第12章 深入计算机原理 二进制的眼光](md/architecture/readme.md)
+  [第12章 计算机原理 二进制眼光](md/architecture/readme.md)
 
 - 第四部 乾达婆，百变
 
   [第13章 汇编](md/assembler/readme.md)
 
-  [第14章 链接](#)
+  [第14章 链接](md/link/readme.md)
 
   [第15章 预处理](#)
 
