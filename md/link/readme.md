@@ -32,18 +32,18 @@ gcc hello.o stack.o queue.o main.o -o main
 
 用nm命令查看目标文件的符号表:
 
-```bash
+```vim
 gcc -c hello.c
 nm hello.o
 ```
 
 通过 readelf 命令可以查看二进制文件信息：
 
-```bash
+```vim
 readelf -a addmuniu.o       // 或者 a.out
 ```
 
-```bash
+```vim
 ELF 头：
   Magic：   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
   类别:                              ELF64
