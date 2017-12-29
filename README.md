@@ -52,25 +52,29 @@ Ubuntu + Atom + Github + Markdown
 
   [第14章 链接](md/link/readme.md)
 
-  [第15章 预处理](#)
+  [第15章 定义声明](md/declare/readme.md)
 
-  [第16章 编译](#)
+  [第16章 库](md/library/readme.md)
+
+  [第17章 预处理](#)
+
+  [第18章 编译](#)
 
 - 第五部 阿修罗，星移
 
-  [第17章 指针](md/pointer/readme.md)
+  [第19章 指针](md/pointer/readme.md)
 
 - 第六部 迦楼罗，易筋
 
-  [第18章 标准库](md/stl/readme.md)
+  [第20章 标准库](md/stl/readme.md)
 
 - 第七部 紧那罗，般若
 
-  [第19章 Linux内核](md/linuxkernel/readme.md)
+  [第21章 Linux内核](md/linuxkernel/readme.md)
 
 - 第八部 摩呼罗迦，逍遥
 
-  [第20章 PHP扩展](md/phpextend/readme.md)
+  [第22章 PHP扩展](md/phpextend/readme.md)
 
 [TOC]
 
