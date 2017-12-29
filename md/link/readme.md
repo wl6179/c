@@ -43,7 +43,7 @@ nm hello.o
 readelf -a addmuniu.o       // 或者 a.out
 ```
 
-```vim
+```bash
 ELF 头：
   Magic：   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
   类别:                              ELF64
