@@ -5,22 +5,22 @@
 ![第四部 乾达婆，百变](/ig/4.jpg)
 
 
-链接
+链接的概览
 ===========================
 
-一步编译多个文件
+- 一步编译多个文件
 
 ```bash
 gcc main.c stack.c queue.c hello.c -o a.out
 ```
 
-注意，文件顺序的调整，是会影响到代码的编排顺序的，如：
+- 注意，文件顺序的调整，是会影响到代码的编排顺序的，如：
 
 ```bash
 gcc hello.c stack.c queue.c main.c -o a.out
 ```
 
-也分可以多步编译：
+- 也分可以多步编译：
 
 ```bash
 gcc -c hello.c
@@ -30,14 +30,14 @@ gcc -c main.c
 gcc hello.o stack.o queue.o main.o -o main
 ```
 
-用nm命令查看目标文件的符号表:
+- 用`nm`命令查看目标文件的符号表:
 
 ```bash
 gcc -c hello.c
 nm hello.o
 ```
 
-通过 readelf 命令可以查看二进制文件信息：
+- 通过`readelf`命令可以查看二进制文件信息：
 
 ```bash
 readelf -a main       # 或者 a.out
@@ -172,8 +172,7 @@ Symbol table '.symtab' contains 14 entries:
 No version information found in this file.
 ```
 
-
-链接脚本，默认使用的是 默认链接脚本，如下：（也可以自己去定义自己的脚本）
+- 链接脚本，默认使用的是**默认链接脚本**，如下：（也可以自己去定义自己的脚本）
 
   链接脚本决定了给每个段分配什么地址，如何对齐，哪个段在前，哪个段在后，哪些段合并到同一个Segment，另外链接脚本还要插入一些符号到最终生成的文件中，例如__bss_start、_edata、_end等。
 
