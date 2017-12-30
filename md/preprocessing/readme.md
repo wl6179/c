@@ -77,6 +77,11 @@
 
       那就是设置 Makefile。下一章再说。
 
+何为`展开`：
+----------
+
+用一个例子来直接说明，什么叫预处理的（代码的）`展开`。
+
 - 预处理语句，是如何被`编译时`替换代码的：
 
   假设这段预处理代码
@@ -101,3 +106,71 @@
     ```c
     #if 1
     ```
+
+- C标准规定了几个特殊的宏：
+
+  __FILE__、__LINE__ 等。
+
+  可以展开为当前源文件的文件名，是一个`字符串`；或当前代码行的行号，是一个`整数`；
+
+  这两个宏在源代码中不同的位置使用会`自动取不同的值`，显然不是用 #define 能定义得出来的。它们是`编译器内建的特殊的宏`。
+
+  例如
+
+    assert 头文件库中，就使用到了这两个特殊的宏，可查看`函数`部分内容。
+
+
+- 综合示例：
+
+  咱们自己实现一个 assert 函数，用宏定义。如下
+
+  ```c
+  /* assert.h 宏定义 */
+  #undef assert	/* 去掉默认存在的 assert 定义 */
+
+  #ifdef NDEBUG
+  	#define assert(test)	((void)0)
+  #else		/* NDEBUG not defined */
+  	void _Assert(char *);        // 在另一个文件中定义，声明一下
+  	/* 宏指令 */
+  	#define _STR(x) _VAL(x)
+  	#define _VAL(x) #x           // 将整型转换成`字符串`#x
+  	#define assert(test)	((test) ? (void)0 : _Assert(__FILE__ ":" _STR(__LINE__) " " #test))
+  #endif
+  ```
+
+  ```c
+  /* assert.c */
+  #include <stdio.h>
+  #include <stdlib.h>
+
+  void _Assert(char *mesg)
+  {		/* 打印信息并中断 */
+  	fputs(mesg, stderr);         // stderr 标准错误
+  	fputs(" -- assertion failed\n", stderr);
+
+  	abort();                     // 中断当前进程
+  }
+  ```
+
+  ```c
+  /* main.c */
+  #include "assert.h"       // 用户自定义的 非标准`头文件`
+
+  int main(void)
+  {
+  	assert(0 > 1);
+
+  	return 0;
+  }
+  ```
+
+  编译运行：
+
+  ```bash
+  gcc -Wall main.c xassert.c -o assert
+  ./assert
+
+    main.c:6 0>1 -- assertion failed
+    Aborted
+  ```
