@@ -20,7 +20,7 @@ objdump -dS abc.o
 
 ```bash
 gcc -print-search-dirs
-```
+````
 
 静态库
 ----------
@@ -129,5 +129,41 @@ int main(void)
   gcc main.c -L. -lstack -Istack -o main      # -L.在当前目录找，-lstack 就是 libstack.a！
   ```
 
+  这种指定库的方式`编译`（非挨个.c文件的一块编译），可以确保生成代码的`最优化`，多余的、未被调用的函数代码，不会被加入最终可执行文件的代码中。
+
 动态库
 ----------
+
+- 代码：
+
+  同上。静态库的代码示例。
+
+- `-fPIC 选项` 生成位置无关的代码：
+
+  共享库各段的加载地址并没有定死，可以加载到任意位置。因为`指令`中没有使用绝对地址，因此称为位置无关代码。
+
+- 把 *.c 编译成`位置无关的目标文件` *.o：
+
+  ```bash
+  gcc -c -fPIC stack/stack.c stack/push.c stack/pop.c stack/is_empty.c
+  ```
+
+- 生成`共享库` libstack.so：
+
+  ```bash
+  gcc -shared -o  libstack.so  stack.o push.o pop.o is_empty.o
+  ```
+
+- 把 main.c 和共享库`编译` `链接`在一起：
+
+  共享库的搜索路径，由`动态链接器`决定
+
+    1.首先在环境变量 LD_LIBRARY_PATH 所记录的路径中查找；
+
+    2.然后从缓存文件 /etc/ld.so.cache 中查找。这个缓存文件由 ldconfig 命令读取配置文件 /etc/ld.so.conf 之后生成；
+
+    3.如果上述步骤都找不到，则到默认的系统路径中查找，先是 /usr/lib，然后是 /lib；
+
+  ```bash
+  gcc main.c -g -L. -lstack -Istack -o main     # -g
+  ```
