@@ -58,9 +58,9 @@ Ubuntu + Atom + Github + Markdown
 
   [第16章 库](md/library/readme.md)
 
-  [第17章 预处理](#)
+  [第17章 预处理](md/preprocessing/readme.md)
 
-  [第18章 编译](#)
+  [第18章 编译](md/compile/readme.md)
 
 - 第五部 阿修罗，星移
 
