@@ -71,12 +71,14 @@ stack.c 这个模块（.c文件），`封装了` top 和 stack 两个变量; (�
   ```c
   /* stack.h */
   #ifndef STACK_H       // 如果STACK_H这个`宏`没有定义过，则在预处理中输出。（这种保护头文件的写法，避免了头文件的内容被`重复包含`）
-  #define STACK_H
+
+	#define STACK_H				// 定义`宏` 名称！
   // 外部声明：
   extern void push(char);
   extern char pop(void);
   extern int is_empty(void);
-  #endif                // 如果STACK_H这个`宏`没有定义过，则在预处理中输出。
+
+	#endif                // 如果STACK_H这个`宏`没有定义过，则在预处理中输出。
   ```
 
   如上，`宏定义名`就用头文件名的`大写`形式，这是规范。
