@@ -48,7 +48,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第12章 计算机原理 二进制眼光](md/architecture/readme.md)
 
-  [第1x章 虚拟内存管理](md/vmm/readme.md)
+  [第13章 虚拟内存管理](md/vmm/readme.md)
 
 - 第四部 乾达婆，百变
 
