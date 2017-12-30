@@ -168,9 +168,9 @@
   编译运行：
 
   ```bash
-  gcc -Wall main.c xassert.c -o assert
+  gcc -Wall main.c assert.c -o assert
   ./assert
 
-    main.c:6 0>1 -- assertion failed
-    Aborted
+    assert.c:6 0 > 1 -- assertion failed
+    已放弃 (核心已转储)
   ```
