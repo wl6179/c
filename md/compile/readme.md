@@ -55,12 +55,32 @@ MakeFile 自动更新依赖 完成编译
 
   make 时，会创建一个`Shell进程`去执行每一个需要执行的命令。
 
+- MakeFile 还可`以条件`为中心来写：（让多目标，来依赖一`条件`！重心改变）
+
+  ```vim
+  main: main.o stack.o maze.o
+  	gcc main.o stack.o maze.o -o main
+
+  main.o stack.o maze.o: main.h         #多个目标，同时的依赖同一个`条件`！
+  main.o maze.o: maze.h
+  main.o stack.o: stack.h
+  ```
+
+  总之，MakeFile 的唯一目的，就是描述清楚`依赖关系`，怎么写都无所谓！ 其实，`多目标`的规则，make会自动拆成几条`单目标`的规则来处理。
+
+- 变量和赋值：
+
+  一般用等于号 `=` 时，变量在`前、后`定义都可以，因为 = 不会立刻`展开`；
+
+  但是我们有时候希望 make 在遇到变量定义时`立即展开`，可以用 `:=` 运算符；
+
 make
 ----------
 
 - MakeFile 中如何定义 make clean：
 
   ```bash
+  ...
   # 注意：命令处开头用的是 TAB
   clean:
   	@echo "cleanning project"        #执行的命令前面，加了@字符，则不显示命令本身而只显示它的结果；如果这条命令出错，make不会继续执行后续命令。
@@ -72,4 +92,39 @@ make
 
   ```bash
   make clean
+  ```
+
+- make 的几个约定俗成的`目标`：
+
+    `all`，执行主要的编译工作，通常用作缺省目标。
+
+    `install`，执行编译后的安装工作，把可执行文件、配置文件、文档等分别拷到不同的安装目录。
+
+    `clean`，删除编译生成的二进制文件。
+
+    `distclean`，终极清空。不仅删除编译生成的二进制文件，也删除其它生成的文件，只留下源文件。
+
+- make 的隐含规则数据库：
+
+  ```bash
+  make -p
+  ```
+
+  截取一段有用的：
+
+  ```vim
+  ...
+  # default
+  OUTPUT_OPTION = -o $@
+
+  # default
+  CC = cc
+
+  # default
+  COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+
+  %.o: %.c
+  #  commands to execute (built-in):
+          $(COMPILE.c) $(OUTPUT_OPTION) $<
+  ...
   ```
