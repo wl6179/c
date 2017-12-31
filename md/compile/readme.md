@@ -128,3 +128,23 @@ make
           $(COMPILE.c) $(OUTPUT_OPTION) $<
   ...
   ```
+- makefile 自动生成依赖关系：（-M）
+
+  ```bash
+  gcc -M main.c
+  ```
+
+  或
+
+  ```bash
+  gcc -MM *.c
+  ```
+
+make 的测试方法：
+----------
+
+就是`不真的执行`，而是大概`输出一下`将要执行的`命令`行出来！。
+
+```bash
+gcc -n *.c
+```
