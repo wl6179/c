@@ -18,7 +18,7 @@ Ubuntu + Atom + Github + Markdown
 
 ## 目录（天龙八部） ##
 
-- 第一部 帝释天，降龙
+- `第一部` 帝释天，降龙
 
   [第1章 C标准库和glibc](md/glibc/readme.md)
 
@@ -28,7 +28,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第4章 遇到算法](md/algorithm/readme.md)
 
-- 第二部 龙王，六脉
+- `第二部` 龙王，六脉
 
   [第5章 结构](md/structure/readme.md)
 
@@ -40,7 +40,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第9章 调试工具](md/testing/readme.md)
 
-- 第三部 夜叉，无相
+- `第三部` 夜叉，无相
 
   [第10章 二进制 逻辑门电路表示](md/onezero/readme.md)
 
@@ -50,7 +50,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第13章 虚拟内存管理](md/vmm/readme.md)
 
-- 第四部 乾达婆，百变
+- `第四部` 乾达婆，百变
 
   [第14章 链接](md/link/readme.md)
 
