@@ -85,8 +85,34 @@
       {
       	char c;
       	func(&c);
-        
+
       	printf("%c\n", c);
         ...
       }
       ```
+
+斗转星移 - 跨域访问
+----------
+
+通过`地址`（指针的特点），可以去改变`非自己作用域`的变量。
+
+```c
+#include <stdio.h>
+
+int *swap(int *px, int *py)
+{
+	int temp;
+	temp = *px;
+	*px = *py;
+	*py = temp;  // 交换 *px 和 *py 的值！!（就是直接操作 px he py 地址，即 外部的实参：&i, &j。）
+	return px;
+}
+
+int main(void)
+{
+	int i = 10, j = 20;        // 此处main函数的i、j，将被`swap函数`改变！
+	int *p = swap(&i, &j);
+	printf("now i=%d j=%d *p=%d\n", i, j, *p);
+	return 0;
+}
+```
