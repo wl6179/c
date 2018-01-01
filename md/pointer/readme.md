@@ -168,6 +168,58 @@ void func(int *a)       // 指针 int *
   int *a[10];
   ```
 
+- `main函数`的标准原型
+
+  是 int main(int argc, char *argv[]);。argc是命令行参数的个数；而argv是一个`指向指针的指针`；为什么不是指针数组呢？因为函数原型中的[]，表示`指针`而不表示`数组`，`等价于char **argv`。
+
+    那为什么要写成 `char *argv[]`，而不写成 `char **argv` 呢？
+
+      这样写给读代码的人提供了有用信息，argv 不是指向单个指针，而是指向一个`指针数组的`首元素。
+
+  例子：
+
+    ```c
+    /*
+     * 注：完整的 main 函数，可以根据执行程序的入口参数做更精细的控制
+    */
+    int main(int argc, char *argv[])
+    {
+    	int i;
+
+    	for(i = 0; i < argc; i++)
+    		printf("argv[%d]=%s\n", i, argv[i]);
+
+    	return 0;
+    }
+    ```
+
+  输出：
+
+    ```bash
+    ./a.out a b c
+
+    argv[0]=./a.out
+    argv[1]=a
+    argv[2]=b
+    argv[3]=c
+
+
+    ln -s a.out printargv
+    ./printargv d e
+
+    argv[0]=./printargv
+    argv[1]=d
+    argv[2]=e
+    ```
+
+    NULL 标识着 argv 的结尾！因而也可以这么写，碰到 NULL 结束：
+
+      ```c
+      for(i=0; argv[i] != NULL; i++)
+      {
+        ...
+      }
+      ```
 
 自定义结构体与指针
 ----------
