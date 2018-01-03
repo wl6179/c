@@ -68,15 +68,17 @@ Ubuntu + Atom + Github + Markdown
 
 - **第六部** 迦楼罗，易筋
 
-  [第20章 标准库](md/stl/readme.md)
+  [第20章 函数接口及文档](md/interfacemanpage/readme.md)
+
+  [第21章 标准库](md/stl/readme.md)
 
 - 第七部 紧那罗，般若
 
-  [第21章 Linux内核](md/linuxkernel/readme.md)
+  [第22章 Linux内核](md/linuxkernel/readme.md)
 
 - 第八部 摩呼罗迦，逍遥
 
-  [第22章 PHP扩展](md/phpextend/readme.md)
+  [第23章 PHP扩展](md/phpextend/readme.md)
 
 [TOC]
 
