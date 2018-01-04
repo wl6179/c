@@ -66,9 +66,9 @@ Ubuntu + Atom + Github + Markdown
 
   [第19章 指针](md/pointer/readme.md)
 
-- **第六部** 迦楼罗，易筋
+  [第20章 指针例子](md/pointerexample/readme.md)
 
-  [第20章 函数接口及文档](md/interfacemanpage/readme.md)
+- **第六部** 迦楼罗，易筋
 
   [第21章 标准库](md/stl/readme.md)
 
