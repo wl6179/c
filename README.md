@@ -68,11 +68,11 @@ Ubuntu + Atom + Github + Markdown
 
   [第20章 指针例子](md/pointerexample/readme.md)
 
-- **第六部** 迦楼罗，易筋
+- `第六部` 迦楼罗，易筋
 
   [第21章 标准库](md/stl/readme.md)
 
-- 第七部 紧那罗，般若
+- **第七部** 紧那罗，般若
 
   [第22章 Linux内核](md/linuxkernel/readme.md)
 
