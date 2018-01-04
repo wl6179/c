@@ -28,3 +28,15 @@ char *msg[] = {"Sunday", "Monday", "Tuesday", "Wednesday",
 char *msg = "Sunday0014575678...";
 // 还记得在上一章曾经提过，char *msg 指针，与不定长数组几乎是等价的。即 与 char msg[] 等价。
 ```
+
+函数的表示
+----------
+
+typedef 的用法； 定义一种形式（如函数的样子）。
+
+```c
+// 定义 callback_t 别名，为如下的`回调函数`格式。
+...
+typedef void (*callback_t)(void *);
+...
+```
