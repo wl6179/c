@@ -70,7 +70,7 @@ Ubuntu + Atom + Github + Markdown
 
 - `第六部` 迦楼罗，易筋
 
-  [第21章 标准库](md/stl/readme.md、)
+  [第21章 标准库](md/stl/readme.md)
 
 - **第七部** 紧那罗，般若
 
