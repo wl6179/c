@@ -50,7 +50,7 @@ Ubuntu + Atom + Github + Markdown
 
   [第13章 虚拟内存管理](md/vmm/readme.md)
 
-- `第四部` 乾达婆，百变
+- `第四部` 乾达婆，千变
 
   [第14章 链接](md/link/readme.md)
 
