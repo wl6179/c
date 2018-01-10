@@ -56,6 +56,8 @@ Ubuntu + Atom + Github + Markdown
 
   [第13章 虚拟内存管理](md/vmm/readme.md)
 
+  [解锁技能](md/unlockskills/wuxiangshengong.md)
+
 - `第四部` 乾达婆，千变
 
   [第14章 链接](md/link/readme.md)
@@ -67,6 +69,8 @@ Ubuntu + Atom + Github + Markdown
   [第17章 预处理](md/preprocessing/readme.md)
 
   [第18章 编译](md/compile/readme.md)
+
+  [解锁技能](md/unlockskills/qianbianjiaren.md)
 
 - `第五部` 阿修罗，星移
 

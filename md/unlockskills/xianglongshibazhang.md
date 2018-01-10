@@ -65,7 +65,8 @@ a.out: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
 
 ELF的可执行文件，运行在64位的架构上。
 
-查看二进制文件（ELF的可执行文件）里的内容
+
+查看二进制文件（ELF的可执行文件）里的`字节`内容
 ----------
 
 可看到16进制的数据表示，不再是vim看到的二进制乱码。
@@ -115,6 +116,212 @@ hexdump -C a.out
 00000250  6f 2e 32 00 04 00 00 00  10 00 00 00 01 00 00 00  |o.2.............|
 00000260  47 4e 55 00 00 00 00 00  02 00 00 00 06 00 00 00  |GNU.............|
 ......
+```
+
+查看二进制文件（ELF的可执行文件）里的`机器码`内容（将`c可执行程序`，`反汇编`成`机器代码`）
+----------
+
+可解析 a.out 看到：
+
+  1.16进制的`内存VA地址`、（下边汇编语句将要在什么内存地址中去执行）
+
+  2.二进制的`机器指令`（16进制表示）、
+
+  3.以及相对应的`汇编语句`。
+
+objdump -d a.out
+
+(咱不怕浪费纸张，来吧)
+
+```bash
+
+a.out：     文件格式 elf64-x86-64
+
+
+Disassembly of section .init:
+
+00000000004003c8 <_init>:
+  4003c8:	48 83 ec 08          	sub    $0x8,%rsp
+  4003cc:	48 8b 05 25 0c 20 00 	mov    0x200c25(%rip),%rax        # 600ff8 <_DYNAMIC+0x1d0>
+  4003d3:	48 85 c0             	test   %rax,%rax
+  4003d6:	74 05                	je     4003dd <_init+0x15>
+  4003d8:	e8 43 00 00 00       	callq  400420 <__libc_start_main@plt+0x10>
+  4003dd:	48 83 c4 08          	add    $0x8,%rsp
+  4003e1:	c3                   	retq
+
+Disassembly of section .plt:
+
+00000000004003f0 <printf@plt-0x10>:
+  4003f0:	ff 35 12 0c 20 00    	pushq  0x200c12(%rip)        # 601008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  4003f6:	ff 25 14 0c 20 00    	jmpq   *0x200c14(%rip)        # 601010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  4003fc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400400 <printf@plt>:
+  400400:	ff 25 12 0c 20 00    	jmpq   *0x200c12(%rip)        # 601018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  400406:	68 00 00 00 00       	pushq  $0x0
+  40040b:	e9 e0 ff ff ff       	jmpq   4003f0 <_init+0x28>
+
+0000000000400410 <__libc_start_main@plt>:
+  400410:	ff 25 0a 0c 20 00    	jmpq   *0x200c0a(%rip)        # 601020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  400416:	68 01 00 00 00       	pushq  $0x1
+  40041b:	e9 d0 ff ff ff       	jmpq   4003f0 <_init+0x28>
+
+Disassembly of section .plt.got:
+
+0000000000400420 <.plt.got>:
+  400420:	ff 25 d2 0b 20 00    	jmpq   *0x200bd2(%rip)        # 600ff8 <_DYNAMIC+0x1d0>
+  400426:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+0000000000400430 <_start>:
+  400430:	31 ed                	xor    %ebp,%ebp
+  400432:	49 89 d1             	mov    %rdx,%r9
+  400435:	5e                   	pop    %rsi
+  400436:	48 89 e2             	mov    %rsp,%rdx
+  400439:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+  40043d:	50                   	push   %rax
+  40043e:	54                   	push   %rsp
+  40043f:	49 c7 c0 c0 05 40 00 	mov    $0x4005c0,%r8
+  400446:	48 c7 c1 50 05 40 00 	mov    $0x400550,%rcx
+  40044d:	48 c7 c7 26 05 40 00 	mov    $0x400526,%rdi
+  400454:	e8 b7 ff ff ff       	callq  400410 <__libc_start_main@plt>
+  400459:	f4                   	hlt
+  40045a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000400460 <deregister_tm_clones>:
+  400460:	b8 3f 10 60 00       	mov    $0x60103f,%eax
+  400465:	55                   	push   %rbp
+  400466:	48 2d 38 10 60 00    	sub    $0x601038,%rax
+  40046c:	48 83 f8 0e          	cmp    $0xe,%rax
+  400470:	48 89 e5             	mov    %rsp,%rbp
+  400473:	76 1b                	jbe    400490 <deregister_tm_clones+0x30>
+  400475:	b8 00 00 00 00       	mov    $0x0,%eax
+  40047a:	48 85 c0             	test   %rax,%rax
+  40047d:	74 11                	je     400490 <deregister_tm_clones+0x30>
+  40047f:	5d                   	pop    %rbp
+  400480:	bf 38 10 60 00       	mov    $0x601038,%edi
+  400485:	ff e0                	jmpq   *%rax
+  400487:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40048e:	00 00
+  400490:	5d                   	pop    %rbp
+  400491:	c3                   	retq
+  400492:	0f 1f 40 00          	nopl   0x0(%rax)
+  400496:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40049d:	00 00 00
+
+00000000004004a0 <register_tm_clones>:
+  4004a0:	be 38 10 60 00       	mov    $0x601038,%esi
+  4004a5:	55                   	push   %rbp
+  4004a6:	48 81 ee 38 10 60 00 	sub    $0x601038,%rsi
+  4004ad:	48 c1 fe 03          	sar    $0x3,%rsi
+  4004b1:	48 89 e5             	mov    %rsp,%rbp
+  4004b4:	48 89 f0             	mov    %rsi,%rax
+  4004b7:	48 c1 e8 3f          	shr    $0x3f,%rax
+  4004bb:	48 01 c6             	add    %rax,%rsi
+  4004be:	48 d1 fe             	sar    %rsi
+  4004c1:	74 15                	je     4004d8 <register_tm_clones+0x38>
+  4004c3:	b8 00 00 00 00       	mov    $0x0,%eax
+  4004c8:	48 85 c0             	test   %rax,%rax
+  4004cb:	74 0b                	je     4004d8 <register_tm_clones+0x38>
+  4004cd:	5d                   	pop    %rbp
+  4004ce:	bf 38 10 60 00       	mov    $0x601038,%edi
+  4004d3:	ff e0                	jmpq   *%rax
+  4004d5:	0f 1f 00             	nopl   (%rax)
+  4004d8:	5d                   	pop    %rbp
+  4004d9:	c3                   	retq
+  4004da:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+00000000004004e0 <__do_global_dtors_aux>:
+  4004e0:	80 3d 51 0b 20 00 00 	cmpb   $0x0,0x200b51(%rip)        # 601038 <__TMC_END__>
+  4004e7:	75 11                	jne    4004fa <__do_global_dtors_aux+0x1a>
+  4004e9:	55                   	push   %rbp
+  4004ea:	48 89 e5             	mov    %rsp,%rbp
+  4004ed:	e8 6e ff ff ff       	callq  400460 <deregister_tm_clones>
+  4004f2:	5d                   	pop    %rbp
+  4004f3:	c6 05 3e 0b 20 00 01 	movb   $0x1,0x200b3e(%rip)        # 601038 <__TMC_END__>
+  4004fa:	f3 c3                	repz retq
+  4004fc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000400500 <frame_dummy>:
+  400500:	bf 20 0e 60 00       	mov    $0x600e20,%edi
+  400505:	48 83 3f 00          	cmpq   $0x0,(%rdi)
+  400509:	75 05                	jne    400510 <frame_dummy+0x10>
+  40050b:	eb 93                	jmp    4004a0 <register_tm_clones>
+  40050d:	0f 1f 00             	nopl   (%rax)
+  400510:	b8 00 00 00 00       	mov    $0x0,%eax
+  400515:	48 85 c0             	test   %rax,%rax
+  400518:	74 f1                	je     40050b <frame_dummy+0xb>
+  40051a:	55                   	push   %rbp
+  40051b:	48 89 e5             	mov    %rsp,%rbp
+  40051e:	ff d0                	callq  *%rax
+  400520:	5d                   	pop    %rbp
+  400521:	e9 7a ff ff ff       	jmpq   4004a0 <register_tm_clones>
+
+0000000000400526 <main>:
+  400526:	55                   	push   %rbp
+  400527:	48 89 e5             	mov    %rsp,%rbp
+  40052a:	48 83 ec 10          	sub    $0x10,%rsp
+  40052e:	c6 45 ff 00          	movb   $0x0,-0x1(%rbp)
+  400532:	0f be 45 ff          	movsbl -0x1(%rbp),%eax
+  400536:	89 c6                	mov    %eax,%esi
+  400538:	bf d4 05 40 00       	mov    $0x4005d4,%edi
+  40053d:	b8 00 00 00 00       	mov    $0x0,%eax
+  400542:	e8 b9 fe ff ff       	callq  400400 <printf@plt>
+  400547:	b8 00 00 00 00       	mov    $0x0,%eax
+  40054c:	c9                   	leaveq
+  40054d:	c3                   	retq
+  40054e:	66 90                	xchg   %ax,%ax
+
+0000000000400550 <__libc_csu_init>:
+  400550:	41 57                	push   %r15
+  400552:	41 56                	push   %r14
+  400554:	41 89 ff             	mov    %edi,%r15d
+  400557:	41 55                	push   %r13
+  400559:	41 54                	push   %r12
+  40055b:	4c 8d 25 ae 08 20 00 	lea    0x2008ae(%rip),%r12        # 600e10 <__frame_dummy_init_array_entry>
+  400562:	55                   	push   %rbp
+  400563:	48 8d 2d ae 08 20 00 	lea    0x2008ae(%rip),%rbp        # 600e18 <__init_array_end>
+  40056a:	53                   	push   %rbx
+  40056b:	49 89 f6             	mov    %rsi,%r14
+  40056e:	49 89 d5             	mov    %rdx,%r13
+  400571:	4c 29 e5             	sub    %r12,%rbp
+  400574:	48 83 ec 08          	sub    $0x8,%rsp
+  400578:	48 c1 fd 03          	sar    $0x3,%rbp
+  40057c:	e8 47 fe ff ff       	callq  4003c8 <_init>
+  400581:	48 85 ed             	test   %rbp,%rbp
+  400584:	74 20                	je     4005a6 <__libc_csu_init+0x56>
+  400586:	31 db                	xor    %ebx,%ebx
+  400588:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  40058f:	00
+  400590:	4c 89 ea             	mov    %r13,%rdx
+  400593:	4c 89 f6             	mov    %r14,%rsi
+  400596:	44 89 ff             	mov    %r15d,%edi
+  400599:	41 ff 14 dc          	callq  *(%r12,%rbx,8)
+  40059d:	48 83 c3 01          	add    $0x1,%rbx
+  4005a1:	48 39 eb             	cmp    %rbp,%rbx
+  4005a4:	75 ea                	jne    400590 <__libc_csu_init+0x40>
+  4005a6:	48 83 c4 08          	add    $0x8,%rsp
+  4005aa:	5b                   	pop    %rbx
+  4005ab:	5d                   	pop    %rbp
+  4005ac:	41 5c                	pop    %r12
+  4005ae:	41 5d                	pop    %r13
+  4005b0:	41 5e                	pop    %r14
+  4005b2:	41 5f                	pop    %r15
+  4005b4:	c3                   	retq
+  4005b5:	90                   	nop
+  4005b6:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  4005bd:	00 00 00
+
+00000000004005c0 <__libc_csu_fini>:
+  4005c0:	f3 c3                	repz retq
+
+Disassembly of section .fini:
+
+00000000004005c4 <_fini>:
+  4005c4:	48 83 ec 08          	sub    $0x8,%rsp
+  4005c8:	48 83 c4 08          	add    $0x8,%rsp
+  4005cc:	c3                   	retq
 ```
 
 查看二进制文件（ELF的可执行文件）的内容`ELF结构信息`
@@ -386,64 +593,4 @@ Displaying notes found at file offset 0x00000274 with length 0x00000024:
   Owner                 Data size	Description
   GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
     Build ID: 3c464d52c1ffcb6a1a64bbaca759ff13226ecfca
-```
-
-解锁技能 —— **打印**一切
-============================
-
-打印`整数`的十六进制值
-----------
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-        int num = 10;
-
-        printf("the num is: %x\n", num);
-
-        return 0;
-}
-
-输出（十六进制的 num变量）
-the num is: a
-```
-
-打印`整数`的**地址**的十六进制值
-----------
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-        int num = 10;
-
-        printf("the num is: %p\n", &num);
-
-        return 0;
-}
-
-输出（十六进制的 num变量的地址）
-the num is: 0x7ffcfc6c3eb4
-```
-
-打印`函数`的十六进制值（地址）
-----------
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-	int num = 10;
-
-	printf("the main()'s address is: %p\n", main);
-
-	return 0;
-}
-
-输出（十六进制的 main函数的地址）
-the main()'s address is: 0x400596
 ```
