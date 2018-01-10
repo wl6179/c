@@ -32,6 +32,8 @@ Ubuntu + Atom + Github + Markdown
 
   [第4章 遇到算法](md/algorithm/readme.md)
 
+  [解锁技能](md/unlockskills/xianglongshibazhang.md)
+
 - `第二部` 龙王，六脉
 
   [第5章 结构](md/structure/readme.md)
