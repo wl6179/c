@@ -52,7 +52,7 @@ find . -name "*.c" -exec cat {} \; | wc -l
 find . -name "*.c" -exec cat {} \; > temp.txt
 
 
-自动分析一个文件的信息及格式 file命令
+自动分析一个文件的信息及格式
 ----------
 
 可以分析出是 ASCII、x86的汇编、ELF的可执行 等文件。
