@@ -45,7 +45,7 @@ PHP扩展
     先启动 gdb
 
       ```bash
-      gdb	php
+      gdb php
       ```
 
     然后运行 PHP 程序
