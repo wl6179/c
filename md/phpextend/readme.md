@@ -31,14 +31,14 @@ PHP扩展
     用 gdb 打开 core 文件
 
       ```bash
-      gdb	php	core文件
+      gdb php core文件
       ```
 
     用 bt 命令查看是从哪行崩溃的就可以。
 
     注意：
 
-      如果你的程序跑崩了却没有产生	core	文件，你可以试试执行		ulimit	-c unlimited		这条命令，然后再执行你的程序，你一般就会找到那个	core	文件了，如果还找不到，那就到	/cores，/tmp	或 /var/tmp	下看看有没有，在这些目录下的	core	文件通常会带一个数字的后缀，你只要知道就是那个东西就行了。
+      如果你的程序跑崩了却没有产生 core 文件，你可以试试执行 ulimit -c unlimited 这条命令，然后再执行你的程序，你一般就会找到那个 core 文件了，如果还找不到，那就到 /cores，/tmp 或 /var/tmp 下看看有没有，在这些目录下的 core 文件通常会带一个数字的后缀，你只要知道就是那个东西就行了。
 
   - 或者，直接用 gdb 跑崩一个 PHP 程序：
 
@@ -51,7 +51,7 @@ PHP扩展
     然后运行 PHP 程序
 
       ```bash
-      run	test.php
+      run test.php
       ```
 
     如果执行崩了，你会直接看到崩溃信息！
